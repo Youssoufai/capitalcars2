@@ -10,4 +10,10 @@
         </div>
     </section>
     <x-features />
+    <x-box />
+    <x-provide />
+    <x-narrate />
+    <x-deals />
+    <x-client />
+    <x-contact />
 </x-hero>
