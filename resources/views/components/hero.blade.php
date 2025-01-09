@@ -16,7 +16,7 @@
 <body>
     <nav class="bg-black text-white p-4">
         <div class="flex items-center justify-between">
-            <h1 class="text-4xl md:text-5xl font-bold">Capital <span class="text-green-700">Cars</span></h1>
+            <h1 class="text-4xl md:text-5xl font-bold">Capital <span class="text-red">Cars</span></h1>
             {{--   <button class="md:hidden text-2xl" 
                 >
                 ☰
