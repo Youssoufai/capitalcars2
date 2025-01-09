@@ -6,4 +6,7 @@
         </div>
     </section>
     <x-do />
+    <x-box />
+    <x-client />
+    <x-process />
 </x-hero>
