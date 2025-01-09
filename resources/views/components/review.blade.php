@@ -12,11 +12,11 @@
                         <h1 class='text-xl md:text-2xl'>Person Name</h1>
                         <h2 class='text-amber-500'>Profession</h2>
                         <div class="flex">
-                            <i class='fas fa-star text-red fa-4x'></i>
-                            <i class='fas fa-star text-red fa-4x'></i>
-                            <i class='fas fa-star fa-4x'></i>
-                            <i class='fas fa-star fa-4x'></i>
-                            <i class='fas fa-star fa-4x'></i>
+                            <i class='fas fa-star text-red fa-2x'></i>
+                            <i class='fas fa-star text-red fa-2x'></i>
+                            <i class='fas fa-star fa-2x'></i>
+                            <i class='fas fa-star fa-2x'></i>
+                            <i class='fas fa-star fa-2x'></i>
                         </div>
                     </div>
                 </div>
@@ -31,11 +31,11 @@
                         <h1 class='text-xl md:text-2xl'>Person Name</h1>
                         <h2 class='text-amber-500'>Profession</h2>
                         <div class="flex">
-                            <FaStar class='text-red' />
-                            <FaStar class='text-red' />
-                            <FaStar />
-                            <FaStar />
-                            <FaStar />
+                            <i class='fas fa-star text-red fa-2x'></i>
+                            <i class='fas fa-star text-red fa-2x'></i>
+                            <i class='fas fa-star fa-2x'></i>
+                            <i class='fas fa-star fa-2x'></i>
+                            <i class='fas fa-star fa-2x'></i>
                         </div>
                     </div>
                 </div>
