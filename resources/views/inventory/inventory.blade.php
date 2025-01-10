@@ -97,6 +97,10 @@
                             ₦45,000,000
                         </h1>
                     </div>
+                    <i class="fas fa-tachometer-alt"></i><span>No accidents, personal use</span>
+                    <p>
+                        <i class="fas fa-cogs"></i><span>Automatic</span>
+                    </p>
                 </div>
             </div>
         </section>
