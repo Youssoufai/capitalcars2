@@ -9,3 +9,4 @@ Route::view('/about', 'about.about')->name('about');
 Route::view('/service', 'service.service')->name('service');
 Route::view('/contact', 'contact.contact')->name('contact');
 Route::view('/inventory', 'inventory.inventory')->name('inventory');
+Route::view('/admin', 'admin.admin')->name('admin');
