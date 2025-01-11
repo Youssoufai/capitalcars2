@@ -6,8 +6,8 @@
             <input type="text" placeholder="What are you looking for?"
                 class="w-full h-[38px] px-4 py-5 border rounded-lg">
         </div>
-        <section>
-            <div>
+        <section class="flex gap-8">
+            <div class="w-[30%]">
                 <div class="bg-black text-white p-4 rounded-t-lg">
                     <i class="fas fa-car"></i> <span class="text-2xl font-bold">Filters</span>
                 </div>
@@ -89,18 +89,14 @@
                 </div>
             </div>
             <div>
-                <div>
-                    <img src="e450.jpg" alt="mercedes-benz e450" class="w-[445px] h-[245px]">
-                    <div class="flex space-x-7">
-                        <h1 class="font-bold">MERCEDES BENZ E450 2018 COUPE</h1>| <h1
-                            class="font-semibold text-red rounded-md">
-                            ₦45,000,000
-                        </h1>
+                <div class="flex">
+                    <div class="w-[340px]">
+                        <img src="450e.jpg" alt="mercedes-benz e450" class="w-full h-[200px]">
                     </div>
-                    <i class="fas fa-tachometer-alt"></i><span>No accidents, personal use</span>
-                    <p>
-                        <i class="fas fa-cogs"></i><span>Automatic</span>
-                    </p>
+                    <div class="flex space-x-7">
+
+                    </div>
+
                 </div>
             </div>
         </section>
