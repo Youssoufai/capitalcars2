@@ -27,4 +27,27 @@ class AuthController extends Controller
         // Redirect
         return redirect()->route('admin');
     }
+    public function login(Request $request)
+    {
+        // Validate
+
+
+        $fields = $request->validate([
+            'email' => 'required|email',     // Ensure email is required and valid
+            'password' => 'required|string', // Ensure password is required
+        ]);
+
+        // Attempt to Login
+        if (Auth::attempt($fields)) {
+            return redirect()->intended();
+        } else {
+            return back()->withErrors([
+                'failed' => 'The provided credentials do not match our records'
+            ]);
+        }
+
+
+
+        // Redirect
+    }
 }

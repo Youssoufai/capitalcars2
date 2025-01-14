@@ -27,7 +27,7 @@
                     <label for="password" class="block text-gray-700 font-medium mb-2">Password</label>
                     <input type="password" id="password" name="password"
                         class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    @error('password')
+                    @error('failed')
                         <span class="text-red-500 text-sm">{{ $message }}</span>
                     @enderror
                 </div>
