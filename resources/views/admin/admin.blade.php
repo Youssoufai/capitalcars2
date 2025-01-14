@@ -26,7 +26,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-black">
+                            <a href="{{ route('test-drive.show') }}"
+                                class="flex items-center space-x-2 text-gray-700 hover:text-black">
                                 <i class="fas fa-user"></i>
                                 <span>See Test Drives</span>
                             </a>

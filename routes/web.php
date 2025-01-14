@@ -28,6 +28,8 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.store');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/test-drive', [TestDriveController::class, 'create'])->name('test-drive');
+Route::get('test-drive/2', [TestDriveController::class, 'show'])->name('test-drive.show');
+
 
 /* Route::get('/test-drive/book', [TestDriveController::class, 'create'])->name('test-drive.book');
 Route::post('/test-drive', [TestDriveController::class, 'store'])->name('test-drive.store'); */

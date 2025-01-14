@@ -17,7 +17,9 @@ class TestDriveController extends Controller
     {
         //
 
+        /*   $testDrives = TestDrive::all(); // Retrieve all test drive records
 
+        return view('admin.test-drives.index', ['testDrive' => $testDrives]); */
     }
 
     /**
@@ -50,18 +52,14 @@ class TestDriveController extends Controller
 
         return redirect()->route('about')->with('success', 'Test drive scheduled successfully!');
     }
-    public function showTestDrives()
-    {
-        $testDrives = TestDrive::all(); // Fetch all test drive records
-        return view('admin.test-drives', compact('testDrives'));
-    }
 
     /**
      * Display the specified resource.
      */
     public function show(TestDrive $test_drive)
     {
-        //
+        $testDrives = TestDrive::all();
+        return view('admin.drives.index', ['testDrives' => $testDrives]);
     }
 
 
