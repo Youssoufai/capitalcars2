@@ -9,11 +9,26 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::view('/about', 'about.about')->name('about');
 Route::view('/service', 'service.service')->name('service');
 Route::view('/contact', 'contact.contact')->name('contact');
 Route::view('/inventory', 'inventory.inventory')->name('inventory');
 Route::view('/admin', 'admin.admin')->name('admin');
+
+// Test Drive Resource
+Route::resource('test-drive', TestDriveController::class);
+
+// Auth Routes
+Route::view('/register', 'auth.register')->name('register');
+Route::post('/register', [AuthController::class, 'register'])->name('register.store');
+
+Route::view('/login', 'auth.login')->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login.store');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/test-drive', [TestDriveController::class, 'create'])->name('test-drive');
+
 /* Route::get('/test-drive/book', [TestDriveController::class, 'create'])->name('test-drive.book');
 Route::post('/test-drive', [TestDriveController::class, 'store'])->name('test-drive.store'); */
 /* Route::get('/inventory', action: [VehicleController::class, 'index'])->name('inventorry');
@@ -21,12 +36,3 @@ Route::post('/test-drive', [TestDriveController::class, 'store'])->name('test-dr
 /* Route::get('/test-drive', [TestDriveController::class, 'showForm'])->name('test-drive.form');
 Route::post('/test-drive', [TestDriveController::class, 'submitForm'])->name('test-drive.submit');
  */
-Route::resource('test-drive', TestDriveController::class);
-Route::view('/test-drive', 'test-drive.book')->name('test-drive');
-Route::post('/test-drive', [TestDriveController::class, 'store'])->name('test-drive.store');
-
-Route::view('/register', 'auth.register')->name('register');
-Route::post('/register', [AuthController::class, 'register']);
-
-Route::view('/login', 'auth.login')->name('login');
-Route::post('/login', [AuthController::class, 'login']);

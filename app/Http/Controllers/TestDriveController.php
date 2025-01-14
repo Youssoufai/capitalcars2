@@ -23,7 +23,11 @@ class TestDriveController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create() {}
+    public function create()
+    {
+
+        return view('test-drive.book');
+    }
 
     /**
      * Store a newly created resource in storage.

@@ -45,9 +45,22 @@ class AuthController extends Controller
                 'failed' => 'The provided credentials do not match our records'
             ]);
         }
+        // Redirect
+    }
+    public function logout(Request $request)
+    {
+        // Logout
+        Auth::logout();
 
+        // Invalidate Session
+        $request->session()->invalidate();
 
+        // Regenerate Token
+
+        $request->session()->regenerateToken();
 
         // Redirect
+
+        return redirect()->route('inventory');
     }
 }

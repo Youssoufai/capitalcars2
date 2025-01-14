@@ -4,9 +4,12 @@
         <!-- Admin Header -->
         <header class="bg-black text-white p-4 flex justify-between items-center">
             <h1 class="text-xl font-bold">Admin Dashboard</h1>
-            <button class="bg-red-600 px-4 py-2 rounded text-sm hover:bg-red-700">
-                Logout
-            </button>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button class="bg-red-600 px-4 py-2 rounded text-sm hover:bg-red-700">
+                    Logout
+                </button>
+            </form>
         </header>
 
         <!-- Main Content -->
