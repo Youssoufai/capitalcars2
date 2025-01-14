@@ -14,7 +14,9 @@ class CreateVehiclesTable extends Migration
             $table->decimal('price', 10, 2);
             $table->integer('mileage');
             $table->string('engine');
+            $table->string('dealer_name');
             $table->string('drivetrain');
+            $table->string('description');
             $table->year('year');
             $table->string('location');
             $table->timestamps();

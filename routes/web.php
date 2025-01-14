@@ -30,7 +30,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/test-drive', [TestDriveController::class, 'create'])->name('test-drive');
 Route::get('test-drive/2', [TestDriveController::class, 'show'])->name('test-drive.show');
 
-
+Route::post('/admin', [VehicleController::class, 'store'])->name('vehicle-store');
 /* Route::get('/test-drive/book', [TestDriveController::class, 'create'])->name('test-drive.book');
 Route::post('/test-drive', [TestDriveController::class, 'store'])->name('test-drive.store'); */
 /* Route::get('/inventory', action: [VehicleController::class, 'index'])->name('inventorry');

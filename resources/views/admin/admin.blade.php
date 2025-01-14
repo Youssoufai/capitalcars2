@@ -42,23 +42,115 @@
                     <!-- Add New Listing -->
                     <div class="p-4 bg-gray-200 rounded-lg mb-6">
                         <h3 class="font-bold mb-4">Add New Car Listing</h3>
-                        <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Car Model" class="w-full p-2 border rounded-lg">
-                            <input type="text" placeholder="Price (₦)" class="w-full p-2 border rounded-lg">
-                            <input type="text" placeholder="Mileage" class="w-full p-2 border rounded-lg">
-                            <input type="text" placeholder="Drivetrain" class="w-full p-2 border rounded-lg">
-                            <input type="text" placeholder="Engine" class="w-full p-2 border rounded-lg">
-                            <input type="text" placeholder="Year" class="w-full p-2 border rounded-lg">
-                            <input type="text" placeholder="Dealer Name" class="w-full p-2 border rounded-lg">
-                            <input type="text" placeholder="Location" class="w-full p-2 border rounded-lg">
-                            <div class="col-span-full">
-                                <textarea placeholder="Description" class="w-full p-2 border rounded-lg"></textarea>
+                        <form action="{{ route('vehicle-store') }}" method="POST"
+                            class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            @csrf
+
+                            <!-- Car Model -->
+                            <div>
+                                <label for="model" class="block font-medium mb-1">Car Model</label>
+                                <input type="text" name="model" id="model" value="{{ old('model') }}"
+                                    placeholder="Car Model"
+                                    class="w-full p-2 border rounded-lg @error('model') border-red-500 @enderror">
+                                @error('model')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
                             </div>
+
+                            <!-- Price -->
+                            <div>
+                                <label for="price" class="block font-medium mb-1">Price (₦)</label>
+                                <input type="text" name="price" id="price" value="{{ old('price') }}"
+                                    placeholder="Price (₦)"
+                                    class="w-full p-2 border rounded-lg @error('price') border-red-500 @enderror">
+                                @error('price')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <!-- Mileage -->
+                            <div>
+                                <label for="mileage" class="block font-medium mb-1">Mileage</label>
+                                <input type="text" name="mileage" id="mileage" value="{{ old('mileage') }}"
+                                    placeholder="Mileage"
+                                    class="w-full p-2 border rounded-lg @error('mileage') border-red-500 @enderror">
+                                @error('mileage')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <!-- Drivetrain -->
+                            <div>
+                                <label for="drivetrain" class="block font-medium mb-1">Drivetrain</label>
+                                <input type="text" name="drivetrain" id="drivetrain" value="{{ old('drivetrain') }}"
+                                    placeholder="Drivetrain"
+                                    class="w-full p-2 border rounded-lg @error('drivetrain') border-red-500 @enderror">
+                                @error('drivetrain')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <!-- Engine -->
+                            <div>
+                                <label for="engine" class="block font-medium mb-1">Engine</label>
+                                <input type="text" name="engine" id="engine" value="{{ old('engine') }}"
+                                    placeholder="Engine"
+                                    class="w-full p-2 border rounded-lg @error('engine') border-red-500 @enderror">
+                                @error('engine')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <!-- Year -->
+                            <div>
+                                <label for="year" class="block font-medium mb-1">Year</label>
+                                <input type="text" name="year" id="year" value="{{ old('year') }}"
+                                    placeholder="Year"
+                                    class="w-full p-2 border rounded-lg @error('year') border-red-500 @enderror">
+                                @error('year')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <!-- Dealer Name -->
+                            <div>
+                                <label for="dealer_name" class="block font-medium mb-1">Dealer Name</label>
+                                <input type="text" name="dealer_name" id="dealer_name"
+                                    value="{{ old('dealer_name') }}" placeholder="Dealer Name"
+                                    class="w-full p-2 border rounded-lg @error('dealer_name') border-red-500 @enderror">
+                                @error('dealer_name')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <!-- Location -->
+                            <div>
+                                <label for="location" class="block font-medium mb-1">Location</label>
+                                <input type="text" name="location" id="location" value="{{ old('location') }}"
+                                    placeholder="Location"
+                                    class="w-full p-2 border rounded-lg @error('location') border-red-500 @enderror">
+                                @error('location')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <!-- Description -->
+                            <div class="col-span-full">
+                                <label for="description" class="block font-medium mb-1">Description</label>
+                                <textarea name="description" id="description" placeholder="Description"
+                                    class="w-full p-2 border rounded-lg @error('description') border-red-500 @enderror">{{ old('description') }}</textarea>
+                                @error('description')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+
+                            <!-- Submit Button -->
                             <button type="submit"
                                 class="col-span-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">
                                 Add Listing
                             </button>
                         </form>
+
                     </div>
 
                     <!-- Listings Table -->
