@@ -11,8 +11,10 @@
                 hassle-free test drive booking system allows you to choose your preferred vehicle, schedule a time, and
                 experience the ride firsthand. Whether it's a sedan, SUV, or truck, feel the comfort, performance, and
                 style in real-time.</p>
-            <button class='rounded px-6 md:px-8 lg:px-12 py-2 md:py-3 bg-[#EA001E] text-sm md:text-base'>Schedule a test
-                drive</button>
+            <button class='rounded px-6 md:px-8 lg:px-12 py-2 md:py-3 bg-[#EA001E] text-sm md:text-base'>
+                <a href="{{ route('test-drive') }}">Schedule a test
+                    drive</a>
+            </button>
         </div>
     </div>
     <div

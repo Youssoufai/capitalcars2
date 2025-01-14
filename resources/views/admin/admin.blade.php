@@ -28,12 +28,6 @@
                                 <span>Manage Users</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-black">
-                                <i class="fas fa-cogs"></i>
-                                <span>Settings</span>
-                            </a>
-                        </li>
                     </ul>
                 </aside>
 
