@@ -16,6 +16,8 @@ class TestDriveController extends Controller
     public function index()
     {
         //
+
+
     }
 
     /**
@@ -42,7 +44,12 @@ class TestDriveController extends Controller
         //dd($validatedData);
         TestDrive::create($validatedData);
 
-        return redirect()->back()->with('success', 'Test drive scheduled successfully!');
+        return redirect()->route('about')->with('success', 'Test drive scheduled successfully!');
+    }
+    public function showTestDrives()
+    {
+        $testDrives = TestDrive::all(); // Fetch all test drive records
+        return view('admin.test-drives', compact('testDrives'));
     }
 
     /**

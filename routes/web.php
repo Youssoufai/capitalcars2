@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TestDriveController;
 use App\Http\Controllers\VehicleController;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,6 @@ Route::post('/test-drive', [TestDriveController::class, 'submitForm'])->name('te
 Route::resource('test-drive', TestDriveController::class);
 Route::view('/test-drive', 'test-drive.book')->name('test-drive');
 Route::post('/test-drive', [TestDriveController::class, 'store'])->name('test-drive.store');
+
+Route::view('/register', 'auth.register')->name('register');
+Route::post('/register', [AuthController::class, 'register']);

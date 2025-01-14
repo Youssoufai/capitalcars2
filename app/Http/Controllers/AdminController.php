@@ -11,10 +11,5 @@ class AdminController extends Controller
         $testDrives = TestDrive::all();
         return view('admin.test-drives.index', compact('testDrives'));
     }
-    public function update(Request $request, $id)
-    {
-        $testDrive = TestDrive::findOrFail($id);
-        $testDrive->update(['status' => $request->status]);
-        return back()->with('success', 'Status updated successfully.');
-    }
+    public function update(Request $request, $id) {}
 }
