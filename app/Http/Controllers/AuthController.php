@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -16,12 +18,13 @@ class AuthController extends Controller
             'password' => 'required|string|min:3|confirmed',     // Password is required, min length 8, must match confirmation
         ]);
 
-        dd($fields);
+
 
         // Register User
-
+        $user = User::create($fields);
         // Login User
-
+        Auth::login($user);
         // Redirect
+        return redirect()->route('admin');
     }
 }
