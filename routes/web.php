@@ -39,7 +39,10 @@ Route::get('/admin/dashboard', [VehicleController::class, 'index'])->name('admin
 Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory.inventory');
 
 Route::delete('/vehicles/{vehicle}', [VehicleController::class, 'destroy'])->name('vehicles.destroy');
+Route::get('/vehicle/{vehicle}/edit', [VehicleController::class, 'edit'])->name('vehicle.edit');
 
+// Update vehicle
+Route::put('/vehicle/{vehicle}', [VehicleController::class, 'update'])->name('vehicle.update');
 /* Route::get('/test-drive/book', [TestDriveController::class, 'create'])->name('test-drive.book');
 Route::post('/test-drive', [TestDriveController::class, 'store'])->name('test-drive.store'); */
 /* Route::get('/inventory', action: [VehicleController::class, 'index'])->name('inventorry');

@@ -48,4 +48,29 @@ class VehicleController extends Controller
         // Redirect back with a success message
         return redirect()->route('inventory.inventory')->with('success', 'Vehicle deleted successfully.');
     }
+    public function edit(Vehicle $vehicle)
+    {
+        return view('admin.edit', compact('vehicle'));
+    }
+    public function update(Request $request, Vehicle $vehicle)
+    {
+        // Validate the incoming data
+        $request->validate([
+            'model' => 'required|string|max:255',
+            'price' => 'required|numeric',
+            'year' => 'required|numeric',
+            'location' => 'required|string|max:255',
+        ]);
+
+        // Update the vehicle
+        $vehicle->update([
+            'model' => $request->model,
+            'price' => $request->price,
+            'year' => $request->year,
+            'location' => $request->location,
+        ]);
+
+        // Redirect back with success message
+        return redirect()->route('inventory.inventory')->with('success', 'Vehicle updated successfully.');
+    }
 }
