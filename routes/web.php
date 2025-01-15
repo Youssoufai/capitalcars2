@@ -14,7 +14,7 @@ Route::view('/about', 'about.about')->name('about');
 Route::view('/service', 'service.service')->name('service');
 Route::view('/contact', 'contact.contact')->name('contact');
 Route::view('/inventory', 'inventory.inventory')->name('inventory');
-Route::view('/admin', 'admin.admin')->name('admin');
+
 
 // Test Drive Resource
 Route::resource('test-drive', TestDriveController::class);
@@ -31,6 +31,9 @@ Route::get('/test-drive', [TestDriveController::class, 'create'])->name('test-dr
 Route::get('test-drive/2', [TestDriveController::class, 'show'])->name('test-drive.show');
 
 Route::post('/admin', [VehicleController::class, 'store'])->name('vehicle-store');
+Route::middleware('auth')->group(function () {
+    Route::view('/admin', 'admin.admin')->name('admin');
+});
 /* Route::get('/test-drive/book', [TestDriveController::class, 'create'])->name('test-drive.book');
 Route::post('/test-drive', [TestDriveController::class, 'store'])->name('test-drive.store'); */
 /* Route::get('/inventory', action: [VehicleController::class, 'index'])->name('inventorry');
