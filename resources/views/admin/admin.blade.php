@@ -175,9 +175,6 @@
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">
                                         Edit
                                     </button>
-                                    <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">
-                                        Delete
-                                    </button>
                                 </td>
                             </tr>
                             <!-- Add more rows dynamically -->
@@ -193,8 +190,11 @@
                                 <td class="border p-2 space-x-2">
                                     <button
                                         class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Edit</button>
-                                    <button
-                                        class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Delete</button>
+                                    <form action="{{ route('vehicles.destroy', $vehicle) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         @empty

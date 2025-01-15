@@ -38,4 +38,14 @@ class VehicleController extends Controller
         $vehicles = Vehicle::all(); // Fetch all vehicles
         return view('admin.admin', ['vehicles' => $vehicles]);
     }
+    public function destroy(Vehicle $vehicle)
+    {
+        // The vehicle is already passed to the method via route-model binding
+
+        // Delete the vehicle
+        $vehicle->delete();
+
+        // Redirect back with a success message
+        return redirect()->route('inventory.inventory')->with('success', 'Vehicle deleted successfully.');
+    }
 }
