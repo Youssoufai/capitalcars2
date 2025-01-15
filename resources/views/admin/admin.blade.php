@@ -183,6 +183,27 @@
                             <!-- Add more rows dynamically -->
                         </tbody>
                     </table>
+                    <tbody>
+                        @forelse($vehicles as $vehicle)
+                            <tr class="text-center">
+                                <td class="border p-2">{{ $vehicle->model }}</td>
+                                <td class="border p-2">₦{{ number_format($vehicle->price) }}</td>
+                                <td class="border p-2">{{ $vehicle->year }}</td>
+                                <td class="border p-2">{{ $vehicle->location }}</td>
+                                <td class="border p-2 space-x-2">
+                                    <button
+                                        class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Edit</button>
+                                    <button
+                                        class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Delete</button>
+                                </td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td colspan="5" class="text-center p-4">No vehicles found.</td>
+                            </tr>
+                        @endforelse
+                    </tbody>
+
                 </main>
             </div>
         </div>

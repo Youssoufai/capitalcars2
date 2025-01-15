@@ -26,5 +26,16 @@ class VehicleController extends Controller
         // Create Vehicle
 
         Vehicle::create($validated);
+
+        // Retrieve all vehicles
+        $vehicles = Vehicle::all();
+
+        // Redirect back with vehicles
+        return redirect()->route('admin.dashboard')->with('vehicles', $vehicles);
+    }
+    public function index()
+    {
+        $vehicles = Vehicle::all(); // Fetch all vehicles
+        return view('admin.admin', ['vehicles' => $vehicles]);
     }
 }

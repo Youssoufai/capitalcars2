@@ -27,7 +27,7 @@
                 <li><a href="/inventory">Inventory</a></li>
                 <li><a href="/service">Services</a></li>
                 <li><a href="/contact">Contacts</a></li>
-                <li><a href="{{ route('admin') }}">Admin</a></li>
+                <li><a href="{{ route('admin.dashboard') }}">Admin</a></li>
             </ul>
         </div>
         <ul id="mobile-menu" class="hidden flex flex-col gap-4 mt-4 text-white md:hidden">
