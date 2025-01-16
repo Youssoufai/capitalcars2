@@ -17,9 +17,9 @@ class TestDriveController extends Controller
     {
         //
 
-        /*   $testDrives = TestDrive::all(); // Retrieve all test drive records
+        $testDrives = TestDrive::all(); // Retrieve all test drive records
 
-        return view('admin.test-drives.index', ['testDrive' => $testDrives]); */
+        return view('admin.drives.index', ['testDrive' => $testDrives]);
     }
 
     /**
@@ -56,10 +56,11 @@ class TestDriveController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(TestDrive $test_drive)
+    public function show(TestDrive $testDrive)
     {
-        $testDrives = TestDrive::all();
-        return view('admin.drives.index', ['testDrives' => $testDrives]);
+
+        $testDrive = TestDrive::all($testDrive); // Find a specific test drive
+        return view('admin.drives.index', compact('testDrive'));
     }
 
 

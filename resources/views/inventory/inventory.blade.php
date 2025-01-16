@@ -100,87 +100,57 @@
                 </div>
             </div>
             <!-- Listings Section -->
+
             <section class="flex flex-col gap-8">
                 <div class="w-full md:w-full bg-white rounded-lg shadow-lg p-6">
                     <!-- Single Listing -->
-                    <div class="flex flex-wrap md:flex-nowrap gap-6 border-b pb-4">
-                        <div class="w-full md:w-1/3">
-                            <img src="450e.jpg" alt="Mercedes-Benz E450" class="w-full h-48 object-cover rounded-lg">
-                        </div>
-                        <div class="w-full md:w-2/3 flex flex-col justify-between">
-                            <h1 class="font-bold text-xl md:text-2xl">MERCEDES BENZ GLA250</h1>
-                            <h2 class="text-red-600 text-xl md:text-2xl font-bold"><sup>₦</sup>14,800,000</h2>
-                            <div class="flex flex-wrap gap-4 mt-2">
-                                <div class="flex items-center space-x-2">
-                                    <i class="fas fa-tachometer-alt text-gray-500"></i>
-                                    <span class="text-sm">Mileage: 25,000 km</span>
+                    @foreach ($vehicles as $vehicle)
+                        <div class="flex flex-wrap md:flex-nowrap gap-6 border-b pb-4">
+                            <div class="w-full md:w-1/3">
+                                <img src="450e.jpg" alt="Mercedes-Benz E450"
+                                    class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="w-full md:w-2/3 flex flex-col justify-between">
+                                <h1 class="font-bold text-xl md:text-2xl"> {{ $vehicle->model }} </h1>
+                                <h2 class="text-red-600 text-xl md:text-2xl font-bold"><sup>₦</sup>14,800,000</h2>
+                                <div class="flex flex-wrap gap-4 mt-2">
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-tachometer-alt text-gray-500"></i>
+                                        <span class="text-sm">Mileage: 25,000 km</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-calendar-alt text-gray-500"></i>
+                                        <span class="text-sm">Year: 2015</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-car text-gray-500"></i>
+                                        <span class="text-sm">Drive Train: RWD</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-cogs text-gray-500"></i>
+                                        <span class="text-sm">Engine: 2.4L H4</span>
+                                    </div>
                                 </div>
-                                <div class="flex items-center space-x-2">
-                                    <i class="fas fa-calendar-alt text-gray-500"></i>
-                                    <span class="text-sm">Year: 2015</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i class="fas fa-car text-gray-500"></i>
-                                    <span class="text-sm">Drive Train: RWD</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i class="fas fa-cogs text-gray-500"></i>
-                                    <span class="text-sm">Engine: 2.4L H4</span>
+                                <p class="text-gray-600 text-sm md:text-base mt-2">This luxury car offers excellent
+                                    performance
+                                    with a stylish design. Perfect for daily use or special occasions.</p>
+                                <div class="flex justify-between items-center mt-4">
+                                    <span class="text-gray-500 text-sm">Dealer: Capital Cars</span>
+                                    <span class="text-gray-500 text-sm">Location: Abuja, Nigeria</span>
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                                        <a href="{{ route('test-drive') }}">Test
+                                            Drive/Inspection</a>
+                                    </button>
                                 </div>
                             </div>
-                            <p class="text-gray-600 text-sm md:text-base mt-2">This luxury car offers excellent
-                                performance
-                                with a stylish design. Perfect for daily use or special occasions.</p>
-                            <div class="flex justify-between items-center mt-4">
-                                <span class="text-gray-500 text-sm">Dealer: Capital Cars</span>
-                                <span class="text-gray-500 text-sm">Location: Abuja, Nigeria</span>
-                                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-                                    <a href="{{ route('test-drive') }}">Test
-                                        Drive/Inspection</a>
-                                </button>
-                            </div>
                         </div>
-                    </div>
+                    @endforeach
                     <!-- Add more listings as needed -->
                 </div>
                 <!-- Add more listings as needed -->
 
             </section>
+
         </section>
     </section>
-
-    <div class="container">
-        <h1>Vehicle Inventory</h1>
-
-        @if ($vehicles->isEmpty())
-            <p>No vehicles available in the inventory.</p>
-        @else
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Make</th>
-                        <th>Model</th>
-                        <th>Year</th>
-                        <th>Color</th>
-                        <th>Price</th>
-                        <th>License Plate</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($vehicles as $vehicle)
-                        <tr>
-                            <td>{{ $vehicle->id }}</td>
-                            <td>{{ $vehicle->make }}</td>
-                            <td>{{ $vehicle->model }}</td>
-                            <td>{{ $vehicle->year }}</td>
-                            <td>{{ $vehicle->color }}</td>
-                            <td>{{ $vehicle->price }}</td>
-                            <td>{{ $vehicle->license_plate }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        @endif
-    </div>
 </x-hero>

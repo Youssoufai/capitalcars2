@@ -12,15 +12,14 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($testDrives as $testDrive)
+            @foreach ($testDrive as $testDrivee)
                 <tr>
-                    <td>{{ $testDrive->name }}</td>
-                    <td>{{ $testDrive->email }}</td>
-                    <td>{{ $testDrive->phone }}</td>
-                    <td>{{ $testDrive->vehicle }}</td>
-                    <td>{{ $testDrive->date }}</td>
-                    <td>{{ $testDrive->time }}</td>
-                    <td>{{ ucfirst($testDrive->status) }}</td>
+                    <td>{{ $testDrivee->email }}</td>
+                    <td>{{ $testDrivee->phone }}</td>
+                    <td>{{ $testDrivee->vehicle }}</td>
+                    <td>{{ $testDrivee->date }}</td>
+                    <td>{{ $testDrivee->time }}</td>
+                    <td>{{ ucfirst($testDrivee->status) }}</td>
                 </tr>
             @endforeach
         </tbody>

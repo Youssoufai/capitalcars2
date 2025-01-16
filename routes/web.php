@@ -29,7 +29,8 @@ Route::post('/login', [AuthController::class, 'login'])->name('login.store');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/test-drive', [TestDriveController::class, 'create'])->name('test-drive');
-Route::get('test-drive/2', [TestDriveController::class, 'show'])->name('test-drive.show');
+/* Route::get('/test-drive/2', [TestDriveController::class, 'show'])->name('test-drive.show'); */
+Route::get('/test-drivee', [TestDriveController::class, 'index'])->name('test-drive.show');
 
 Route::post('/admin', [VehicleController::class, 'store'])->name('vehicle-store');
 Route::middleware('auth')->group(function () {
