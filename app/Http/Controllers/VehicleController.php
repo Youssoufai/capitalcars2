@@ -61,6 +61,13 @@ class VehicleController extends Controller
     {
         // The vehicle is already passed to the method via route-model binding
 
+        // Delete vehicle image if exists
+
+
+        if ($vehicle->image) {
+            Storage::disk('public')->delete($vehicle->image);
+        }
+
         // Delete the vehicle
         $vehicle->delete();
 
