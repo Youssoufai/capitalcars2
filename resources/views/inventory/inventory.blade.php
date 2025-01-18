@@ -107,7 +107,7 @@
                     @foreach ($vehicles as $vehicle)
                         <div class="flex flex-wrap md:flex-nowrap gap-6 border-b pb-4">
                             <div class="w-full md:w-1/3">
-                                <img src="450e.jpg" alt="Mercedes-Benz E450"
+                                <img src="{{ asset('storage/' . $vehicle->image) }}" alt="Mercedes-Benz E450"
                                     class="w-full h-48 object-cover rounded-lg">
                             </div>
                             <div class="w-full md:w-2/3 flex flex-col justify-between">
@@ -116,7 +116,7 @@
                                 <div class="flex flex-wrap gap-4 mt-2">
                                     <div class="flex items-center space-x-2">
                                         <i class="fas fa-tachometer-alt text-gray-500"></i>
-                                        <span class="text-sm">Mileage: 25,000 km</span>
+                                        <span class="text-sm">Mileage: {{ $vehicle->mileage }} </span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <i class="fas fa-calendar-alt text-gray-500"></i>
@@ -124,11 +124,11 @@
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <i class="fas fa-car text-gray-500"></i>
-                                        <span class="text-sm">Drive Train: RWD</span>
+                                        <span class="text-sm">Drive Train: {{ $vehicle->drivetrain }} </span>
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <i class="fas fa-cogs text-gray-500"></i>
-                                        <span class="text-sm">Engine: 2.4L H4</span>
+                                        <span class="text-sm">Engine: {{ $vehicle->engine }} </span>
                                     </div>
                                 </div>
                                 <p class="text-gray-600 text-sm md:text-base mt-2">This luxury car offers excellent
@@ -136,7 +136,7 @@
                                     with a stylish design. Perfect for daily use or special occasions.</p>
                                 <div class="flex justify-between items-center mt-4">
                                     <span class="text-gray-500 text-sm">Dealer: Capital Cars</span>
-                                    <span class="text-gray-500 text-sm">Location: Abuja, Nigeria</span>
+                                    <span class="text-gray-500 text-sm">Location: {{ $vehicle->location }} </span>
                                     <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
                                         <a href="{{ route('test-drive') }}">Test
                                             Drive/Inspection</a>

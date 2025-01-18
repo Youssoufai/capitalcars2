@@ -8,6 +8,7 @@ class Vehicle extends Model
 {
     protected $fillable = [
         'model',
+        'image',
         'price',
         'mileage',
         'drivetrain',

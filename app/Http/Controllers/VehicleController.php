@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class VehicleController extends Controller
 {
@@ -13,6 +14,7 @@ class VehicleController extends Controller
         // Validate Vehicle Data
         $validated = $request->validate([
             'model' => 'required|string|max:255',
+            'image' => 'nullable|file|max:9000|mimes:webp,png,jpg,jpeg',
             'price' => 'required|numeric|min:1',
             'mileage' => 'required|string|max:255',
             'drivetrain' => 'required|string|max:255',
@@ -22,10 +24,27 @@ class VehicleController extends Controller
             'location' => 'required|string|max:255',
             'description' => 'nullable|string',
         ]);
+        $path = null;
+        // Store image
+        if ($request->hasFile('image')) {
+            $path = Storage::disk('public')->put('car_images', $request->image);
+        }
+
 
         // Create Vehicle
 
-        Vehicle::create($validated);
+        Vehicle::create([
+            'model' => $request->model,
+            'image' => $path,
+            'price' => $request->price,
+            'mileage' => $request->mileage,
+            'drivetrain' => $request->drivetrain,
+            'engine' => $request->engine,
+            'year' => $request->year,
+            'dealer_name' => $request->dealer_name,
+            'location' => $request->location,
+            'description' => $request->description,
+        ]);
 
         // Retrieve all vehicles
         $vehicles = Vehicle::all();

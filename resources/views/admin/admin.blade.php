@@ -43,7 +43,7 @@
                     <div class="p-4 bg-gray-200 rounded-lg mb-6">
                         <h3 class="font-bold mb-4">Add New Car Listing</h3>
                         <form action="{{ route('vehicle-store') }}" method="POST"
-                            class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            class="grid grid-cols-1 md:grid-cols-2 gap-4" enctype="multipart/form-data">
                             @csrf
 
                             <!-- Car Model -->
@@ -53,6 +53,15 @@
                                     placeholder="Car Model"
                                     class="w-full p-2 border rounded-lg @error('model') border-red-500 @enderror">
                                 @error('model')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div>
+                                <label for="image" class="block font-medium mb-1">Car Image</label>
+                                <input type="file" name="image" id="image" value="{{ old('image') }}"
+                                    placeholder="Car Model"
+                                    class="w-full p-2 border rounded-lg @error('image') border-red-500 @enderror">
+                                @error('image')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -155,30 +164,44 @@
 
                     <!-- Listings Table -->
                     <table class="w-full border-collapse bg-white">
-                        <thead>
-                            <tr class="bg-gray-300 text-gray-700">
-                                <th class="border p-2">Car Model</th>
-                                <th class="border p-2">Price</th>
-                                <th class="border p-2">Year</th>
-                                <th class="border p-2">Location</th>
-                                <th class="border p-2">Actions</th>
+                        @forelse ($vehicles as $vehicle)
+                            <thead>
+                                <tr class="bg-gray-300 text-gray-700">
+                                    <th class="border p-2">Car Model</th>
+                                    <th class="border p-2">Price</th>
+                                    <th class="border p-2">Year</th>
+                                    <th class="border p-2">Location</th>
+                                    <th class="border p-2">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Example Row -->
+                                <tr class="text-center">
+                                    <td class="border p-2"> <img src="{{ asset('storage/' . $vehicle->image) }}"
+                                            alt="" class="h-[200px] w-[200px]"> </td>
+                                    <td class="border p-2"> {{ $vehicle->model }} </td>
+                                    <td class="border p-2">{{ $vehicle->price }}</td>
+                                    <td class="border p-2">{{ $vehicle->year }}</td>
+                                    <td class="border p-2">{{ $vehicle->location }}</td>
+                                    <td class="border p-2 space-x-2">
+                                        <button
+                                            class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600"><a
+                                                href="{{ route('vehicle.edit', $vehicle) }}">
+                                                Edit</a></button>
+                                        <form action="{{ route('vehicles.destroy', $vehicle) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <!-- Add more rows dynamically -->
+                            </tbody>
+                        @empty
+                            <tr>
+                                <td colspan="5" class="text-center p-4">No Vehicles found.</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Example Row -->
-                            <tr class="text-center">
-                                <td class="border p-2">MERCEDES BENZ GLA250</td>
-                                <td class="border p-2">₦14,800,000</td>
-                                <td class="border p-2">2015</td>
-                                <td class="border p-2">Abuja, Nigeria</td>
-                                <td class="border p-2 space-x-2">
-                                    <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">
-                                        Edit
-                                    </button>
-                                </td>
-                            </tr>
-                            <!-- Add more rows dynamically -->
-                        </tbody>
+                        @endforelse
                     </table>
                     <tbody>
                         @forelse($vehicles as $vehicle)
@@ -187,6 +210,9 @@
                                 <td class="border p-2">₦{{ number_format($vehicle->price) }}</td>
                                 <td class="border p-2">{{ $vehicle->year }}</td>
                                 <td class="border p-2">{{ $vehicle->location }}</td>
+                                <td>
+                                    <img src="{{ asset('storage/' . $vehicle->image) }}" alt="">
+                                </td>
                                 <td class="border p-2 space-x-2">
                                     <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600"><a
                                             href="{{ route('vehicle.edit', $vehicle) }}">
