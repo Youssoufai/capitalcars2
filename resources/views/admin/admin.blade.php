@@ -112,6 +112,33 @@
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
                             </div>
+                            <div>
+                                <label for="conditon" class="block font-medium mb-1">Engine</label>
+                                <input type="text" name="engine" id="engine" value="{{ old('condition') }}"
+                                    placeholder="condition"
+                                    class="w-full p-2 border rounded-lg @error('condition') border-red-500 @enderror">
+                                @error('condition')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div>
+                                <label for="transmission" class="block font-medium mb-1">Engine</label>
+                                <input type="text" name="transmission" id="transmission"
+                                    value="{{ old('transmission') }}" placeholder="Transmisson e.g Automatic"
+                                    class="w-full p-2 border rounded-lg @error('transmission') border-red-500 @enderror">
+                                @error('transmission')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div>
+                                <label for="bodytype" class="block font-medium mb-1">Engine</label>
+                                <input type="text" name="bodytype" id="bodytype" value="{{ old('bodytype') }}"
+                                    placeholder="bodytype"
+                                    class="w-full p-2 border rounded-lg @error('bodytype') border-red-500 @enderror">
+                                @error('bodytype')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
 
                             <!-- Year -->
                             <div>

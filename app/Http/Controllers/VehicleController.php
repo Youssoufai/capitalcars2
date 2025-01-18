@@ -23,6 +23,9 @@ class VehicleController extends Controller
             'dealer_name' => 'required|string|max:255',
             'location' => 'required|string|max:255',
             'description' => 'nullable|string',
+            'condition' => 'nullable|string',
+            'transmisson' => 'nullable|string',
+            'bodytype' => 'nullable|string',
         ]);
         $path = null;
         // Store image
@@ -44,6 +47,9 @@ class VehicleController extends Controller
             'dealer_name' => $request->dealer_name,
             'location' => $request->location,
             'description' => $request->description,
+            'conditon' => $request->condition,
+            'transmission' => $request->transmisson,
+            'bodytype' => $request->bodytype
         ]);
 
         // Retrieve all vehicles
@@ -92,6 +98,9 @@ class VehicleController extends Controller
             'engine' => 'nullable|string|max:255',
             'dealer_name' => 'nullable|string|max:255',
             'description' => 'nullable|string',
+            'condition' => 'nullable|string',
+            'transmisson' => 'nullable|string',
+            'bodytype' => 'nullable|string',
         ]);
 
         // Handle image upload

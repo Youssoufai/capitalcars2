@@ -145,6 +145,11 @@
                                         <i class="fas fa-cogs text-gray-500"></i>
                                         <span class="text-sm">Engine: {{ $vehicle->engine }}</span>
                                     </div>
+                                    <br>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-cogs text-gray-500"></i>
+                                        <span class="text-sm">Engine: {{ $vehicle->engine }}</span>
+                                    </div>
                                 </div>
                                 <p class="text-gray-600 text-sm md:text-base mt-2">{{ $vehicle->description }}</p>
                                 <div class="flex justify-between items-center mt-4">
