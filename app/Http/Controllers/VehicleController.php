@@ -72,7 +72,7 @@ class VehicleController extends Controller
         $vehicle->delete();
 
         // Redirect back with a success message
-        return redirect()->route('inventory.inventory')->with('success', 'Vehicle deleted successfully.');
+        return redirect()->route('admin.dashboard')->with('success', 'Vehicle deleted successfully.');
     }
     public function edit(Vehicle $vehicle)
     {
@@ -110,6 +110,66 @@ class VehicleController extends Controller
         $vehicle->update($validatedData);
 
         // Redirect back with a success message
-        return redirect()->route('inventory.inventory')->with('success', 'Vehicle updated successfully.');
+        return redirect()->route('admin');
+    }
+
+    public function filter(Request $request)
+    {
+        // Start with the basic query
+        $query = Vehicle::query();
+
+        // Filter by make (if provided)
+        /*   if ($request->has('make') && $request->make != '') {
+            $query->where('make', $request->make);
+        } */
+        // Start with the basic query
+        $query = Vehicle::query();
+
+        // Filter by condition (if provided)
+        if ($request->has('condition') && count($request->condition) > 0) {
+            $query->whereIn('condition', $request->condition);
+        }
+
+        // Filter by price (if provided)
+        if ($request->has('price') && count($request->price) > 0) {
+            foreach ($request->price as $priceRange) {
+                switch ($priceRange) {
+                    case '0-10M':
+                        $query->orWhereBetween('price', [0, 10000000]);
+                        break;
+                    case '10M-30M':
+                        $query->orWhereBetween('price', [10000000, 30000000]);
+                        break;
+                    case '30M-40M':
+                        $query->orWhereBetween('price', [30000000, 40000000]);
+                        break;
+                    case 'above40M':
+                        $query->orWhere('price', '>', 40000000);
+                        break;
+                }
+            }
+        }
+
+        // Get filtered vehicles
+
+        // Filter by model (if provided)
+        if ($request->has('model') && $request->model != '') {
+            $query->where('model', $request->model);
+        }
+
+        // Filter by year (if provided)
+        if ($request->has('year') && $request->year != '') {
+            $query->where('year', $request->year);
+        }
+
+        // Filter by price range (if provided)
+        /*     if ($request->has('min_price') && $request->has('max_price')) {
+            $query->whereBetween('price', [$request->min_price, $request->max_price]);
+        } */
+
+        // Get the vehicles based on the applied filters
+        $vehicles = $query->get();
+
+        return view('inventory.inventory', compact('vehicles'));
     }
 }

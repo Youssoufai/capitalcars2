@@ -42,6 +42,12 @@ Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory
 Route::delete('/vehicles/{vehicle}', [VehicleController::class, 'destroy'])->name('vehicles.destroy');
 Route::get('/vehicle/{vehicle}/edit', [VehicleController::class, 'edit'])->name('vehicle.edit');
 
+Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory.index');
+
+Route::get('/vehiclse', [VehicleController::class, 'filter'])->name('vehiclee');
+
+Route::resource('vehicles', VehicleController::class);
+
 // Update vehicle
 Route::put('/vehicle/{vehicle}', [VehicleController::class, 'update'])->name('vehicle.update');
 /* Route::get('/test-drive/book', [TestDriveController::class, 'create'])->name('test-drive.book');

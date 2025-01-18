@@ -11,9 +11,12 @@ class CreateVehiclesTable extends Migration
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id(); // BIGINT UNSIGNED primary key
             $table->string('model');
+            $table->string('condition');
+            $table->string('transmission');
+            $table->string('bodytype');
             $table->longText('image')->nullable();
-            $table->decimal('price', 20, 2);
-            $table->integer('mileage');
+            $table->decimal('price',);
+            $table->string('mileage');
             $table->string('engine');
             $table->string('dealer_name');
             $table->string('drivetrain');

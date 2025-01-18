@@ -206,7 +206,7 @@
                             </tr>
                         @endforelse
                     </table>
-                    <tbody>
+                    {{--  <tbody>
                         @forelse($vehicles as $vehicle)
                             <tr class="text-center">
                                 <td class="border p-2">{{ $vehicle->model }}</td>
@@ -233,7 +233,7 @@
                             </tr>
                         @endforelse
                     </tbody>
-
+ --}}
                 </main>
             </div>
         </div>

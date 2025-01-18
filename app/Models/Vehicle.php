@@ -8,6 +8,9 @@ class Vehicle extends Model
 {
     protected $fillable = [
         'model',
+        'condition',
+        'transmission',
+        'bodytype',
         'image',
         'price',
         'mileage',
