@@ -81,22 +81,35 @@ class VehicleController extends Controller
     public function update(Request $request, Vehicle $vehicle)
     {
         // Validate the incoming data
-        $request->validate([
+        $validatedData = $request->validate([
             'model' => 'required|string|max:255',
             'price' => 'required|numeric',
             'year' => 'required|numeric',
             'location' => 'required|string|max:255',
+            'image' => 'nullable|file|max:9000|mimes:webp,png,jpg,jpeg',
+            'mileage' => 'nullable|numeric',
+            'drivetrain' => 'nullable|string|max:255',
+            'engine' => 'nullable|string|max:255',
+            'dealer_name' => 'nullable|string|max:255',
+            'description' => 'nullable|string',
         ]);
 
-        // Update the vehicle
-        $vehicle->update([
-            'model' => $request->model,
-            'price' => $request->price,
-            'year' => $request->year,
-            'location' => $request->location,
-        ]);
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            // Delete old image if it exists
+            if ($vehicle->image && Storage::disk('public')->exists($vehicle->image)) {
+                Storage::disk('public')->delete($vehicle->image);
+            }
 
-        // Redirect back with success message
+            // Store the new image and update the path
+            $path = $request->file('image')->store('car_images', 'public');
+            $validatedData['image'] = $path;
+        }
+
+        // Update the vehicle record
+        $vehicle->update($validatedData);
+
+        // Redirect back with a success message
         return redirect()->route('inventory.inventory')->with('success', 'Vehicle updated successfully.');
     }
 }

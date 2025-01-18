@@ -56,6 +56,9 @@
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
                             </div>
+
+                            {{-- Image --}}
+
                             <div>
                                 <label for="image" class="block font-medium mb-1">Car Image</label>
                                 <input type="file" name="image" id="image" value="{{ old('image') }}"
