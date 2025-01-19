@@ -127,13 +127,6 @@ class VehicleController extends Controller
         // Start with the basic query
         $query = Vehicle::query();
 
-        // Filter by make (if provided)
-        /*   if ($request->has('make') && $request->make != '') {
-            $query->where('make', $request->make);
-        } */
-        // Start with the basic query
-        $query = Vehicle::query();
-
         // Filter by condition (if provided)
         if ($request->has('condition') && count($request->condition) > 0) {
             $query->whereIn('condition', $request->condition);
@@ -159,7 +152,15 @@ class VehicleController extends Controller
             }
         }
 
-        // Get filtered vehicles
+        // Filter by transmission (if provided)
+        if ($request->has('transmission') && count($request->transmission) > 0) {
+            $query->whereIn('transmission', $request->transmission);
+        }
+
+        // Filter by body type (if provided)
+        if ($request->has('bodytype') && count($request->bodytype) > 0) {
+            $query->whereIn('bodytype', $request->bodytype);
+        }
 
         // Filter by model (if provided)
         if ($request->has('model') && $request->model != '') {
@@ -171,14 +172,10 @@ class VehicleController extends Controller
             $query->where('year', $request->year);
         }
 
-        // Filter by price range (if provided)
-        /*     if ($request->has('min_price') && $request->has('max_price')) {
-            $query->whereBetween('price', [$request->min_price, $request->max_price]);
-        } */
-
-        // Get the vehicles based on the applied filters
+        // Get the filtered vehicles
         $vehicles = $query->get();
 
+        // Return the view with the filtered vehicles
         return view('inventory.inventory', compact('vehicles'));
     }
 }

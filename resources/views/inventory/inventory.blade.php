@@ -15,28 +15,24 @@
                 </div>
                 <div class="bg-white rounded-b-lg shadow-lg p-6 space-y-6">
                     <!-- Condition Filter -->
+                    <!-- Condition Filter -->
                     <div>
                         <h2 class="font-semibold mb-2">Condition</h2>
                         <div class="space-y-2">
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" class="form-checkbox">
-                                <span>All</span>
-                            </label>
-                            <label class="flex items-center space-x-2">
-                                <input type="checkbox" class="form-checkbox">
+                                <input type="checkbox" name="condition[]" value="New" class="form-checkbox">
                                 <span>New</span>
                             </label>
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" class="form-checkbox">
+                                <input type="checkbox" name="condition[]" value="Used" class="form-checkbox">
                                 <span>Used</span>
                             </label>
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" class="form-checkbox">
+                                <input type="checkbox" name="condition[]" value="Locally Used" class="form-checkbox">
                                 <span>Locally Used</span>
                             </label>
                         </div>
                     </div>
-
                     <!-- Price Filter -->
                     <div>
                         <h2 class="font-semibold mb-2">Price</h2>
@@ -59,17 +55,16 @@
                             </label>
                         </div>
                     </div>
-
                     <!-- Transmission Filter -->
                     <div>
                         <h2 class="font-semibold mb-2">Transmission</h2>
                         <div class="space-y-2">
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" class="form-checkbox">
+                                <input type="checkbox" name="transmission[]" value="Automatic" class="form-checkbox">
                                 <span>Automatic</span>
                             </label>
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" class="form-checkbox">
+                                <input type="checkbox" name="transmission[]" value="Manual" class="form-checkbox">
                                 <span>Manual</span>
                             </label>
                         </div>
@@ -80,23 +75,23 @@
                         <h2 class="font-semibold mb-2">Body Type</h2>
                         <div class="space-y-2">
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" class="form-checkbox">
+                                <input type="checkbox" name="bodytype[]" value="Sedan" class="form-checkbox">
                                 <span>Sedan</span>
                             </label>
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" class="form-checkbox">
+                                <input type="checkbox" name="bodytype[]" value="SUV" class="form-checkbox">
                                 <span>SUV</span>
                             </label>
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" class="form-checkbox">
+                                <input type="checkbox" name="bodytype[]" value="Truck" class="form-checkbox">
                                 <span>Truck</span>
                             </label>
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" class="form-checkbox">
+                                <input type="checkbox" name="bodytype[]" value="Coupe" class="form-checkbox">
                                 <span>Coupe</span>
                             </label>
                             <label class="flex items-center space-x-2">
-                                <input type="checkbox" class="form-checkbox">
+                                <input type="checkbox" name="bodytype[]" value="Minivan" class="form-checkbox">
                                 <span>Minivan</span>
                             </label>
                         </div>
