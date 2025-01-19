@@ -90,6 +90,16 @@
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
                             </div>
+                            {{-- Condition --}}
+                            <div>
+                                <label for="condition" class="block font-medium mb-1">Condition</label>
+                                <input type="text" name="condition" id="condition" value="{{ old('condition') }}"
+                                    placeholder="Condition"
+                                    class="w-full p-2 border rounded-lg @error('condition') border-red-500 @enderror">
+                                @error('condition')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
+                            </div>
 
                             <!-- Drivetrain -->
                             <div>
@@ -112,17 +122,17 @@
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div>
-                                <label for="conditon" class="block font-medium mb-1">Engine</label>
-                                <input type="text" name="engine" id="engine" value="{{ old('condition') }}"
+                            {{--    <div>
+                                <label for="conditon" class="block font-medium mb-1">Conditon</label>
+                                <input type="text" name="condition" id="condition" value="{{ old('condition') }}"
                                     placeholder="condition"
                                     class="w-full p-2 border rounded-lg @error('condition') border-red-500 @enderror">
                                 @error('condition')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>
                                 @enderror
-                            </div>
+                            </div> --}}
                             <div>
-                                <label for="transmission" class="block font-medium mb-1">Engine</label>
+                                <label for="transmission" class="block font-medium mb-1">Transmission</label>
                                 <input type="text" name="transmission" id="transmission"
                                     value="{{ old('transmission') }}" placeholder="Transmisson e.g Automatic"
                                     class="w-full p-2 border rounded-lg @error('transmission') border-red-500 @enderror">
@@ -131,7 +141,7 @@
                                 @enderror
                             </div>
                             <div>
-                                <label for="bodytype" class="block font-medium mb-1">Engine</label>
+                                <label for="bodytype" class="block font-medium mb-1">Body Type</label>
                                 <input type="text" name="bodytype" id="bodytype" value="{{ old('bodytype') }}"
                                     placeholder="bodytype"
                                     class="w-full p-2 border rounded-lg @error('bodytype') border-red-500 @enderror">
@@ -200,7 +210,7 @@
                                     <th class="border p-2">Car Model</th>
                                     <th class="border p-2">Price</th>
                                     <th class="border p-2">Year</th>
-                                    <th class="border p-2">Location</th>
+                                    <th class="border p-2">Transmission</th>
                                     <th class="border p-2">Actions</th>
                                 </tr>
                             </thead>
@@ -211,6 +221,8 @@
                                             alt="" class="h-[200px] w-[200px]"> </td>
                                     <td class="border p-2"> {{ $vehicle->model }} </td>
                                     <td class="border p-2">{{ $vehicle->price }}</td>
+                                    <td class="border p-2">{{ $vehicle->transmission }}</td>
+                                    <td class="border p-2">{{ $vehicle->bodytype }}</td>
                                     <td class="border p-2">{{ $vehicle->year }}</td>
                                     <td class="border p-2">{{ $vehicle->location }}</td>
                                     <td class="border p-2 space-x-2">

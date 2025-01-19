@@ -47,8 +47,8 @@ class VehicleController extends Controller
             'dealer_name' => $request->dealer_name,
             'location' => $request->location,
             'description' => $request->description,
-            'conditon' => $request->condition,
-            'transmission' => $request->transmisson,
+            'condition' => $request->condition,
+            'transmission' => $request->transmission,
             'bodytype' => $request->bodytype
         ]);
 

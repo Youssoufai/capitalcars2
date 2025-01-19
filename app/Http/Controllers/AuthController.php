@@ -25,7 +25,7 @@ class AuthController extends Controller
         // Login User
         Auth::login($user);
         // Redirect
-        return redirect()->route('admin');
+        return redirect()->route('admin.dashboard');
     }
     public function login(Request $request)
     {
@@ -61,6 +61,6 @@ class AuthController extends Controller
 
         // Redirect
 
-        return redirect()->route('inventory');
+        return redirect()->route('about');
     }
 }

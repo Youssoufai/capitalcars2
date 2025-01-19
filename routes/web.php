@@ -35,8 +35,9 @@ Route::get('/test-drivee', [TestDriveController::class, 'index'])->name('test-dr
 Route::post('/admin', [VehicleController::class, 'store'])->name('vehicle-store');
 Route::middleware('auth')->group(function () {
     Route::view('/admin', 'admin.admin')->name('admin');
+    Route::get('/admin/dashboard', [VehicleController::class, 'index'])->name('admin.dashboard');
 });
-Route::get('/admin/dashboard', [VehicleController::class, 'index'])->name('admin.dashboard');
+
 Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory.inventory');
 
 Route::delete('/vehicles/{vehicle}', [VehicleController::class, 'destroy'])->name('vehicles.destroy');
