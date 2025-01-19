@@ -1,10 +1,19 @@
 <x-hero>
     <section class="h-full p-6 md:p-11">
+        {{-- Search Bar --}}
         <div class="bg-gray-100 text-black p-6 md:p-8 space-y-4 rounded-lg flex flex-col justify-center shadow-lg">
             <h1 class="text-lg md:text-xl font-semibold">What are you looking for?</h1>
-            <input type="text" placeholder="Type to search..."
-                class="w-full h-12 px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-gray-300">
+            <form method="GET" action="{{ route('vehiclee') }}" class="w-full flex items-center space-x-2">
+                <input type="text" name="search" placeholder="Type to search..."
+                    class="w-full h-12 px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-gray-300"
+                    value="{{ request('search') }}">
+                <button type="submit"
+                    class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">
+                    Search
+                </button>
+            </form>
         </div>
+
 
         <div class="flex flex-col md:flex-row gap-6 mt-6 w-full">
             <!-- Filters Section -->

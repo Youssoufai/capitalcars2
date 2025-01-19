@@ -127,6 +127,14 @@ class VehicleController extends Controller
         // Start with the basic query
         $query = Vehicle::query();
 
+        if ($request->has('search') && $request->search != '') {
+            $search = $request->search;
+            $query->where(function ($q) use ($search) {
+                $q->where('model', 'like', "%{$search}%")
+                    ->orWhere('description', 'like', "%{$search}%")
+                    ->orWhere('dealer_name', 'like', "%{$search}%");
+            });
+        }
         // Filter by condition (if provided)
         if ($request->has('condition') && count($request->condition) > 0) {
             $query->whereIn('condition', $request->condition);
