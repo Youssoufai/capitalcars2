@@ -207,10 +207,13 @@
                         @forelse ($vehicles as $vehicle)
                             <thead>
                                 <tr class="bg-gray-300 text-gray-700">
-                                    <th class="border p-2">Car Model</th>
+                                    <th class="border p-2">Car Image</th>
+                                    <th class="border p-2">Model</th>
                                     <th class="border p-2">Price</th>
-                                    <th class="border p-2">Year</th>
                                     <th class="border p-2">Transmission</th>
+                                    <th class="border p-2">Body Type</th>
+                                    <th class="border p-2">Year</th>
+                                    <th class="border p-2">Location</th>
                                     <th class="border p-2">Actions</th>
                                 </tr>
                             </thead>

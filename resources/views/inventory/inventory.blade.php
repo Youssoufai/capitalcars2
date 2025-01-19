@@ -113,46 +113,62 @@
             </form>
 
             <!-- Listings Section -->
+
             <div class="flex flex-col gap-8 w-full md:w-[70%]">
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    @foreach ($vehicles as $vehicle)
+                @foreach ($vehicles as $vehicle)
+                    <div class="bg-white rounded-lg shadow-lg p-6 space-y-4">
                         <div class="flex flex-wrap md:flex-nowrap gap-6 border-b pb-4">
                             <div class="w-full md:w-1/3">
                                 <img src="{{ asset('storage/' . $vehicle->image) }}" alt="{{ $vehicle->model }}"
                                     class="w-full h-48 object-cover rounded-lg">
                             </div>
-                            <div class="w-full md:w-2/3 flex flex-col justify-between">
+                            <div class="w-full md:w-2/3 flex flex-col justify-between mb-4 space-y-4">
                                 <h1 class="font-bold text-xl md:text-2xl">{{ $vehicle->model }}</h1>
                                 <h2 class="text-red-600 text-xl md:text-2xl font-bold">
                                     <sup>₦</sup>{{ number_format($vehicle->price, 2) }}
                                 </h2>
                                 <div class="flex flex-wrap gap-4 mt-2">
                                     <div class="flex items-center space-x-2">
-                                        <i class="fas fa-tachometer-alt text-gray-500"></i>
-                                        <span class="text-sm">Mileage: {{ $vehicle->mileage }}</span>
+                                        <i class="fas fa-tachometer-alt text-black"></i>
+                                        <span class="text-sm"><span class="font-bold">Mileage</span>:
+                                            {{ $vehicle->mileage }}</span> |
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <i class="fas fa-calendar-alt text-gray-500"></i>
-                                        <span class="text-sm">Year: {{ $vehicle->year }}</span>
+                                        <i class="fas fa-calendar-alt text-black"></i>
+                                        <span class="text-sm"><span class="font-bold">Year</span>:
+                                            {{ $vehicle->year }}</span> |
                                     </div>
                                     <div class="flex items-center space-x-2">
-                                        <i class="fas fa-car text-gray-500"></i>
-                                        <span class="text-sm">Drive Train: {{ $vehicle->drivetrain }}</span>
-                                        <span class="text-sm">Drive Train: {{ $vehicle->condition }}</span>
+                                        <i class="fas fa-car text-black"></i>
+                                        <span class="text-sm"> <span class="font-bold">Drive Train</span> :
+                                            {{ $vehicle->drivetrain }}</span> |
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-cogs text-black font-bold 6x"></i>
+                                        <span class="text-sm "> <span class="font-bold">Engine</span> :
+                                            {{ $vehicle->engine }} </span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-wrench text-black"></i>
+                                        <span class="text-sm"><span class="font-bold">Condition</span>:
+                                            {{ $vehicle->condition }} |</span>
                                     </div>
                                 </div>
-                                <p class="text-gray-600 text-sm md:text-base mt-2">{{ $vehicle->description }}</p>
+                                <hr class="mt-5">
+                                <p class="text-gray-600 text-sm md:text-base mt-2 p-4">{{ $vehicle->description }}</p>
                                 <div class="flex justify-between items-center mt-4">
-                                    <span class="text-gray-500 text-sm">Dealer: {{ $vehicle->dealer }}</span>
-                                    <span class="text-gray-500 text-sm">Location: {{ $vehicle->location }}</span>
+                                    <span class="text-gray-500 text-sm"><span class="font-bold">Dealer</span>:
+                                        {{ $vehicle->dealer }}</span>
+                                    <span class="text-gray-500 text-sm"><span class="font-bold">Location</span>:
+                                        {{ $vehicle->location }}</span>
                                     <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
                                         <a href="{{ route('test-drive') }}">Test Drive/Inspection</a>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
