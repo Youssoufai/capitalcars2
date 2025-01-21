@@ -162,7 +162,7 @@
                                     <span class="text-gray-500 text-sm"><span class="font-bold">Location</span>:
                                         {{ $vehicle->location }}</span>
                                     <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-                                        <a href="{{ route('test-drive') }}">Test Drive/Inspection</a>
+                                        <a href="{{ route('test-drive') }}">Test Drive/Inspections</a>
                                     </button>
                                 </div>
                             </div>
