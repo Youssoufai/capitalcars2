@@ -66,16 +66,24 @@
                     <i class="fas fa-angle-right"></i> <span>Home</span>
                 </li>
                 <li class="flex space-x-4 items-center">
-                    <i class="fas fa-angle-right"></i> <span>About</span>
+                    <i class="fas fa-angle-right"></i> <span>
+                        <a href="{{ route('about') }}">About</a>
+                    </span>
                 </li>
                 <li class="flex space-x-4 items-center">
-                    <i class="fas fa-angle-right"></i> <span>Inventory</span>
+                    <i class="fas fa-angle-right"></i> <span>
+                        <a href=" {{ route('inventory.index') }} ">Inventory</a>
+                    </span>
                 </li>
                 <li class="flex space-x-4 items-center">
-                    <i class="fas fa-angle-right"></i> <span>Services</span>
+                    <i class="fas fa-angle-right"></i> <span>
+                        <a href="{{ route('service') }}">Services</a>
+                    </span>
                 </li>
                 <li class="flex space-x-4 items-center">
-                    <i class="fas fa-angle-right"></i> <span>Contact</span>
+                    <i class="fas fa-angle-right"></i> <span>
+                        <a href="{{ route('contact') }}">Contact</a>
+                    </span>
                 </li>
             </ul>
         </section>
@@ -90,10 +98,10 @@
                     <i class="fas fa-envelope mx-4"></i> Info@capitalcars.com
                 </li>
                 <li class="flex">
-                    <i class="fas fa-phone mx-4"></i> +024355237
+                    <i class="fas fa-phone mx-4"></i> +2348034534834
                 </li>
                 <li class="flex">
-                    <i class="fab fa-whatsapp mx-4"></i> +934847739
+                    <i class="fab fa-whatsapp mx-4"></i> +2348034534834
                 </li>
             </ul>
         </section>

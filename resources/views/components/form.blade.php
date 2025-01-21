@@ -29,7 +29,7 @@
                 <i class='fas fa-location-arrow text-red fa-2x'></i> 123 Street New York. USA
             </h3>
             <h3 class='flex gap-1'><span class="font-bold">Telephone:</span>
-                <i class='fas fa-phone fa-2x text-red'></i> +2345894745
+                <i class='fas fa-phone fa-2x text-red'></i> +2348034534834
             </h3>
         </div>
         <div class='bg-white p-8 rounded-lg space-y-4'>
@@ -38,7 +38,7 @@
                 <i class='fas fa-location-arrow text-red fa-2x'></i> 456 Avenue New York. USA
             </h3>
             <h3 class='flex gap-1'><span class="font-bold">Telephone:</span>
-                <i class='fas fa-phone fa-2x text-red'></i> +2345894746
+                <i class='fas fa-phone fa-2x text-red'></i> +2348034534834
             </h3>
         </div>
         <div class='bg-white p-8 rounded-lg space-y-4'>
@@ -47,7 +47,7 @@
                 <i class='fas fa-location-arrow fa-2x text-red'></i> 789 Boulevard New York. USA
             </h3>
             <h3 class='flex gap-1'><span class="font-bold">Telephone:</span>
-                <i class='fas fa-phone text-red fa-2x'></i> +2345894747
+                <i class='fas fa-phone text-red fa-2x'></i> +2348034534834
             </h3>
         </div>
     </section>
