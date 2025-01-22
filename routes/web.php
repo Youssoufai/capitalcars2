@@ -56,8 +56,8 @@ Route::put('/vehicle/{vehicle}', [VehicleController::class, 'update'])->name('ve
 Route::get('/link', function () {
     $target = __DIR__ . '/storage/app/public'; // The actual directory you want to link to
     $link = __DIR__ . '/public/storage';     // The symlink location
-    $taget = str_replace($target, '/route', '');
-    $lnk = str_replace($link, '/route', '');
+    $taget = str_replace($target, '/routes', '');
+    $lnk = str_replace($link, '/routes', '');
     // Check if the target directory exists
     if (!is_dir($target)) {
         die("The target directory does not exist: $target");
