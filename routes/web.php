@@ -21,8 +21,7 @@ Route::view('/inventory', 'inventory.inventory')->name('inventory');
 Route::resource('test-drive', TestDriveController::class);
 
 // Auth Routes
-Route::view('/register', 'auth.register')->name('register');
-Route::post('/register', [AuthController::class, 'register'])->name('register.store');
+
 
 Route::view('/login', 'auth.login')->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.store');
@@ -36,6 +35,8 @@ Route::post('/admin', [VehicleController::class, 'store'])->name('vehicle-store'
 Route::middleware('auth')->group(function () {
     Route::view('/admin', 'admin.admin')->name('admin');
     Route::get('/admin/dashboard', [VehicleController::class, 'index'])->name('admin.dashboard');
+    Route::view('/register', 'auth.register')->name('register');
+    Route::post('/register', [AuthController::class, 'register'])->name('register.store');
 });
 
 Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory.inventory');
