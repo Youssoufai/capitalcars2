@@ -32,6 +32,13 @@
                                 <span>See Test Drives</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('register') }}"
+                                class="flex items-center space-x-2 text-gray-700 hover:text-black">
+                                <i class="fas fa-user"></i>
+                                <span>Register</span>
+                            </a>
+                        </li>
                     </ul>
                 </aside>
 
