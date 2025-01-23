@@ -7,7 +7,7 @@
     </div>
     <section class="flex flex-wrap items-center pt-20 space-x-3 space-y-3">
         <div class="flex-shrink-0">
-            <img src="toyota2.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="toyota" />
+            <img src="{{ asset('toyota2.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="toyota" />
         </div>
         <div class="flex-shrink-0">
             <img src="mercedes2.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
