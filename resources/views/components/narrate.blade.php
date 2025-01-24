@@ -10,10 +10,11 @@
             <img src="/public/toyota2.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="toyota" />
         </div>
         <div class="flex-shrink-0">
-            <img src="mercedes2.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="/public/mercedes2.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="mitsubishi.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('mitsubishi.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
         <div class="flex-shrink-0">
             <img src="kia2.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
