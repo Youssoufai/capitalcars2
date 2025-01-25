@@ -37,6 +37,7 @@
             <li><a href="/service">Services</a></li>
             <li><a href="/contact">Contacts</a></li>
             <li><a href="{{ route('admin.dashboard') }}">Admin</a></li>
+            {{-- board --}}
         </ul>
     </nav>
 
