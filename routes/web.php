@@ -33,8 +33,8 @@ Route::get('/test-drivee', [TestDriveController::class, 'index'])->name('test-dr
 
 Route::post('/admin', [VehicleController::class, 'store'])->name('vehicle-store');
 Route::middleware('auth')->group(function () {
-    Route::view('/admin', 'admin.admin')->name('admin');
-    Route::get('/admin/dashboard', [VehicleController::class, 'index'])->name('admin.dashboard');
+    /*     Route::view('/admin', 'admin.admin')->name('admin'); */
+    Route::get('/admin', [VehicleController::class, 'index'])->name('admin.dashboard');
     Route::view('/register', 'auth.register')->name('register');
     Route::post('/register', [AuthController::class, 'register'])->name('register.store');
 });
