@@ -227,8 +227,7 @@
                             <tbody>
                                 <!-- Example Row -->
                                 <tr class="text-center">
-                                    <td class="border p-2"> <img
-                                            src="{{ asset('/public/storage/car_images/' . $vehicle->image) }}"
+                                    <td class="border p-2"> <img src="'/public/storage/car_images/' . $vehicle->image"
                                             alt="" class="h-[200px] w-[200px]"> </td>
                                     <td class="border p-2"> {{ $vehicle->model }} </td>
                                     <td class="border p-2">{{ $vehicle->price }}</td>
