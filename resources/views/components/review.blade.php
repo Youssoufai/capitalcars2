@@ -7,7 +7,7 @@
         <section class='flex flex-col md:flex-row justify-between gap-5'>
             <div class='w-full md:w-[545px] h-[270px] border rounded-t-lg'>
                 <div class='bg-[#878585] flex gap-9 p-4 rounded-t-lg'>
-                    <img src="testimonial-3.jpg" class='rounded-full w-16 h-16' alt="" />
+                    <img src="public/testimonial-3.jpg" class='rounded-full w-16 h-16' alt="" />
                     <div>
                         <h1 class='text-xl md:text-2xl'>Person Name</h1>
                         <h2 class='text-amber-500'>Profession</h2>
