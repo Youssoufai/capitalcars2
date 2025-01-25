@@ -45,6 +45,7 @@
     </main>
 
     <!-- About Section -->
+    {{-- sec --}}
     <section
         class="h-full p-5 md:p-20 bg-black text-white flex flex-col md:flex-row items-center space-y-10 md:space-y-0 md:space-x-12"
         data-aos="fade-up">
