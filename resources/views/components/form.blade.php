@@ -41,6 +41,7 @@
             <h3 class='flex gap-1'><span class="font-bold">Telephone:</span>
                 <i class='fas fa-phone fa-2x text-red'></i> +2348034534834
             </h3>
+
         </div>
         <div class='bg-white p-8 rounded-lg space-y-4'>
             <h1 class='font-bold text-3xl'>Our Branch 03</h1>
