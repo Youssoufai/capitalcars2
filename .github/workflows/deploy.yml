@@ -41,3 +41,4 @@ jobs:
         server: ${{ secrets.SERVER }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
+        local-dir: public/build # Specify the correct build directory
