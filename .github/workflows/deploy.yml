@@ -41,9 +41,7 @@ jobs:
         server: ${{ secrets.SERVER }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        # Deploy public folder contents (index.php and build folder) to public_html
-        local-dir: ./public/          # The local folder containing build assets and index.php
-        remote-dir: /public_html/     # The remote directory on the server
+    # The remote directory on the server
 
     # Optional: Clean up files on the server if necessary
     # - name: Clean up old files on the server
