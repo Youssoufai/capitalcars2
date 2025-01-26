@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class='self-center'>
-            <img src="features-img.png" alt="features" class="rounded-lg w-full md:w-auto" />
+            <img src="images/features-img.png" alt="features" class="rounded-lg w-full md:w-auto" />
         </div>
         <section class='text-left'>
             <div class='space-y-4'>

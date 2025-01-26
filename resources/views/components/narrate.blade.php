@@ -7,48 +7,62 @@
     </div>
     <section class="flex flex-wrap items-center pt-20 space-x-3 space-y-3">
         <div class="flex-shrink-0">
-            <img src="/public/toyota2.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="toyota" />
+            <img src="{{ asset('images/toyota2.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="toyota" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/mercedes2.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/mercedes2.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/mitsubishi.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/mitsubishi.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/kia2.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/kia2.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/porsche.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/porsche.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/nissan2.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/nissan2.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/cadillac.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/cadillac.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
     </section>
     <section class="flex flex-wrap items-center pt-20 space-x-3 space-y-3">
         <div class="flex-shrink-0">
-            <img src="/public/volvo.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="toyota" />
+            <img src="{{ asset('images/volvo.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="toyota" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/land-rover.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/land-rover.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/lincolcn.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/lincolcn.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="{{ asset('mazda.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/mazda.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/golf.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/mazda.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/hyundai.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/hyundai.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/mini.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('images/mini.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]"
+                alt="bmw" />
         </div>
     </section>
 </section>

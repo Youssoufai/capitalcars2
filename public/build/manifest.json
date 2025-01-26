@@ -31,16 +31,8 @@
     "file": "assets/fa-v4compatibility-C9RhG_FT.woff2",
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-v4compatibility.woff2"
   },
-  "public/bg3.jpg": {
-    "file": "assets/bg3-CALzVcJu.jpg",
-    "src": "public/bg3.jpg"
-  },
-  "public/fact-bg.jpg": {
-    "file": "assets/fact-bg-CjEgt_BH.jpg",
-    "src": "public/fact-bg.jpg"
-  },
   "resources/css/app.css": {
-    "file": "assets/app-CddpzhbF.css",
+    "file": "assets/app-BTf7RB1W.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
