@@ -18,18 +18,18 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16' # Adjust to match your project's Node.js version
+        node-version: '18' # Ensure Node.js v18 or higher is used
 
     - name: Build assets
       run: |
+        rm -rf node_modules # Remove existing node_modules to avoid platform conflicts
         npm install
-        chmod +x node_modules/.bin/vite # Fix for permission issues
         npm run build
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2' # Adjust to match your Laravel project
+        php-version: '8.2'
         tools: composer
 
     - name: Install PHP dependencies
