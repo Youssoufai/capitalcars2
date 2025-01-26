@@ -2,7 +2,7 @@
         <div class='space-y-5'>
             <h1 class='text-center text-3xl md:text-4xl'>Our Clients <span class="text-red">Review</span></h1>
             <p class='text-center text-sm md:text-base'>See How We've Made an Impact: Genuine Feedback from Our Happy
-                Clients</p>
+                Clients</p>{{-- AREED --}}
         </div>
         <section class='flex flex-col md:flex-row justify-between gap-5'>
             <div class='w-full md:w-[545px] h-[270px] border rounded-t-lg'>
