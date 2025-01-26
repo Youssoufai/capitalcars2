@@ -39,7 +39,7 @@
             <img src="/public/lincolcn.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
         </div>
         <div class="flex-shrink-0">
-            <img src="/public/mazda.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
+            <img src="{{ asset('mazda.png') }}" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
         </div>
         <div class="flex-shrink-0">
             <img src="/public/golf.png" class="h-[100px] w-[200px] md:h-[120px] md:w-[240px]" alt="bmw" />
