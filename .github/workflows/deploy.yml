@@ -41,4 +41,4 @@ jobs:
         server: ${{ secrets.SERVER }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        local-dir: public/build/ # Corrected to end with a "/"
+        local-dir: public/ # Corrected to end with a "/"
