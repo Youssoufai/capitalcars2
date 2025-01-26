@@ -35,7 +35,7 @@
         <div class='bg-white p-8 rounded-lg space-y-4'>
             <h1 class='font-bold text-3xl'>Our Branch 02</h1>
             <h3 class='flex gap-1'><span class="font-bold">Address:</span>
-                {{-- addres --}}
+                {{-- address --}}
                 <i class='fas fa-location-arrow text-red fa-2x'></i> 456 Avenue New York. USA
             </h3>
             <h3 class='flex gap-1'><span class="font-bold">Telephone:</span>
