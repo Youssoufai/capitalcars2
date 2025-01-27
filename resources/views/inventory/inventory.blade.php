@@ -124,6 +124,7 @@
                                 <img src="{{ asset('storage/' . $vehicle->image) }}" alt="{{ $vehicle->model }}"
                                     class="w-full h-48 object-cover rounded-lg">
                             </div>
+                            {{-- built --}}
                                 <img src="{{ asset('../storage/app/public/' . $vehicle->image) }}" alt="{{ $vehicle->model }}"
                                     class="w-full h-48 object-cover rounded-lg">
                             </div>
