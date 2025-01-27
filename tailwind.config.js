@@ -18,7 +18,7 @@ export default {
             },
             backgroundImage: {
                 'hero': "linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.427)), url('/public/images/bg3.jpg')",
-                'client': "linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.427)), url('/public/fact-bg.jpg')",
+                'client': "linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.427)), url('/public/images/fact-bg.jpg')",
 
             },
             fontFamily: {
