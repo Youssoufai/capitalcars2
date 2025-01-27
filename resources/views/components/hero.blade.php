@@ -6,10 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Capital Cars</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Capital Cars">
+    <meta name="theme-color" content="#EA001E"> <!-- Color matching your brand -->
+
+    <!-- Title -->
+    <title>Capital Cars | Best Car Deals Online</title>
+
+    <!-- Description -->
+    <meta name="description" content="Find the best deals on new and used cars at Your Automobile Dealership. Shop our wide range of vehicles with great prices, financing options, and more.">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="automobile dealership, car dealership, buy cars online, used cars, new cars, car financing, car sales">
+
+    <!-- Open Graph Meta Tags (Social Media) -->
+ {{--    <meta property="og:type" content="website">
+    <meta property="og:title" content="Your Automobile Dealership | Best Car Deals Online">
+    <meta property="og:description" content="Find the best deals on new and used cars at Your Automobile Dealership.">
+    <meta property="og:image" content="URL_to_image.jpg"> <!-- Replace with your image -->
+    <meta property="og:url" content="https://www.yourdealership.com">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Automobile Dealership | Best Car Deals Online">
+    <meta name="twitter:description" content="Find the best deals on new and used cars at Your Automobile Dealership.">
+    <meta name="twitter:image" content="URL_to_image.jpg"> <!-- Replace with your image -->
+    <meta name="twitter:url" content="https://www.yourdealership.com"> --}}
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('images/logo.jpg') }}" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha384-/N4JfwrYYp72iRFJeOf8ZtzJzCOBd+mNmc1y27ix9CD4hbzUq71aPSSbFT8KN27x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>

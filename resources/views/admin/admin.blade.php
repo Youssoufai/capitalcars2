@@ -91,7 +91,7 @@
                             <div>
                                 <label for="mileage" class="block font-medium mb-1">Mileage</label>
                                 <input type="text" name="mileage" id="mileage" value="{{ old('mileage') }}"
-                                    placeholder="Mileage"
+                                    placeholder="Enter Vehicle Mileage (e.g., 120,000 km)"
                                     class="w-full p-2 border rounded-lg @error('mileage') border-red-500 @enderror">
                                 @error('mileage')
                                     <span class="text-red-500 text-sm">{{ $message }}</span>

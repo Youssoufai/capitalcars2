@@ -17,9 +17,13 @@
         </form>
     </section>
     <section class='space-y-12 flex-1 flex flex-col items-center'>
-        <i class='fab fa-facebook fa-4x p-8 rounded-full bg-gray-300 text-red'></i>
+        <a href="https://www.facebook.com/profile.php?id=100063344733334">
+            <i class='fab fa-facebook fa-4x p-8 rounded-full bg-gray-300 text-red'></i>
+        </a>
         <i class='fab fa-twitter fa-4x p-8 rounded-full bg-gray-300 text-red'></i>
-        <i class='fab fa-instagram fa-4x p-8 rounded-full bg-gray-300 text-red'></i>
+        <a href="https://www.instagram.com/capital__cars?igsh=MXI5eXVqczhpZG9mNA==">
+            <i class='fab fa-instagram fa-4x p-8 rounded-full bg-gray-300 text-red'></i>
+        </a>
         <i class='fab fa-linkedin-in fa-4x p-8 rounded-full bg-gray-300 text-red'></i>
     </section>
     <section class='bg-gray-300 flex flex-col gap-8 p-12 rounded-lg flex-1'>

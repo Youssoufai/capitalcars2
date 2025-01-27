@@ -9,6 +9,6 @@
             of luxury driving with us.</p>
     </div>
     <div class='flex-1'>
-        <img src="about-img.jpg" class='rounded w-full md:w-[484px] h-auto md:h-[340px]' alt="About Us" />
+        <img src="/images/about-img.jpg" class='rounded w-full md:w-[484px] h-auto md:h-[340px]' alt="About Us" />
     </div>
 </section>
