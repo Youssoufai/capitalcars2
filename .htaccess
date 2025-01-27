@@ -1,0 +1,21 @@
+# Redirect to the public directory
+RewriteEngine On
+RewriteRule ^(.*)$ public/$1 [L]
+
+# Enable access to static files directly (like images, CSS, and JS)
+<IfModule mod_rewrite.c>
+    Options -Indexes
+    RewriteEngine On
+
+    # Redirect everything to public/index.php except existing files
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/index.php [L]
+</IfModule>
+
+# Allow image requests from public
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpeg|jpg|png|gif|svg|ico|css|js|woff|woff2|ttf|eot|otf|webp)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+</IfModule>
