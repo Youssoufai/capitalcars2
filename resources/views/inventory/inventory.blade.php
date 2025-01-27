@@ -121,8 +121,8 @@
                             <div class="w-full md:w-1/3">
                                 {{-- comment --}}
                                 {{-- second comment --}}
-                                <img src="{{ asset('storage/' . $vehicle->image) }}" alt="{{ $vehicle->model }}"
-                                    class="w-full h-48 object-cover rounded-lg">
+                                <img src="/storage/{{ $vehicle->image }}" alt="{{ $vehicle->model }}" class="w-full h-48 object-cover rounded-lg">
+
                             </div>
                             {{-- built --}}
                                 
