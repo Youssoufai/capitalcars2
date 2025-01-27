@@ -20,12 +20,6 @@
                     <h2 class="text-lg font-bold mb-4">Admin Menu</h2>
                     <ul class="space-y-3">
                         <li>
-                            <a href="#" class="flex items-center space-x-2 text-gray-700 hover:text-black">
-                                <i class="fas fa-list"></i>
-                                <span>Manage Listings</span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="{{ route('test-drive.show') }}"
                                 class="flex items-center space-x-2 text-gray-700 hover:text-black">
                                 <i class="fas fa-user"></i>
