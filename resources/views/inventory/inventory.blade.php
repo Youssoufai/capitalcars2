@@ -125,8 +125,7 @@
                                     class="w-full h-48 object-cover rounded-lg">
                             </div>
                             {{-- built --}}
-                                <img src="{{ asset('../storage/app/public/' . $vehicle->image) }}" alt="{{ $vehicle->model }}"
-                                    class="w-full h-48 object-cover rounded-lg">
+                                
                             </div>
                             <div class="w-full md:w-2/3 flex flex-col justify-between mb-4 space-y-4">
                                 <h1 class="font-bold text-xl md:text-2xl">{{ $vehicle->model }}</h1>
