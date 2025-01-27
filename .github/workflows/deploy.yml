@@ -18,12 +18,12 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18' # Ensure Node.js v18 or higher is used
+        node-version: '18'
 
     - name: Build assets
       run: |
-        rm -rf node_modules # Remove existing node_modules to avoid platform conflicts
         npm install
+        chmod +x node_modules/.bin/vite
         npm run build
 
     - name: Setup PHP
@@ -38,11 +38,8 @@ jobs:
     - name: Deploy to FTP
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ${{ secrets.SERVER }}
+        server: ${{ secrets.SERVER }} # Ensure this is the correct FTP hostname
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-    # The remote directory on the server
-
-    # Optional: Clean up files on the server if necessary
-    # - name: Clean up old files on the server
-    #   run: ssh username@hostname 'rm -rf /public_html/old_files'
+        local-dir: ./ # Adjust the path as needed for Laravel's public files
+        log-level: verbose
