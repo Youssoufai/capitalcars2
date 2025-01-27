@@ -25,9 +25,9 @@
             <ul id="menu" class="hidden md:flex items-center gap-8">
                 <li><a href="/">Home</a></li>
                 <li><a href="{{ route('about') }}">About</a></li>
-                <li><a href="/inventory">Inventory</a></li>
-                <li><a href="/service">Services</a></li>
-                <li><a href="/contact">Contacts</a></li>
+                <li><a href="{{ route('inventory.index') }}">Inventory</a></li>
+                <li><a href="{{ route('service') }}">Services</a></li>
+                <li><a href="{{ route('contact') }}">Contacts</a></li>
                 <li><a href="{{ route('admin.dashboard') }}">Admin</a></li>
             </ul>
         </div>
