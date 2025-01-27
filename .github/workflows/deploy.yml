@@ -43,3 +43,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         local-dir: public/ # Adjust the path as needed for Laravel's public files
         server-dir: /public_html/ # Adjust this based on your server setup
+        log-level: verbose
