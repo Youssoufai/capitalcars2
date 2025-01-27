@@ -41,5 +41,5 @@ jobs:
         server: ${{ secrets.SERVER }} # Ensure this is the correct FTP hostname
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        local-dir: public/ # Adjust the path as needed for Laravel's public files
+        local-dir: ./ # Adjust the path as needed for Laravel's public files
         log-level: verbose
