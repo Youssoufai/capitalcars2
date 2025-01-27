@@ -36,7 +36,7 @@ jobs:
       run: composer install --no-dev --optimize-autoloader
 
     - name: Deploy to FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      uses: appleboy/scp-action@v0.1.0
       with:
         server: ${{ secrets.SERVER }} # Ensure this is the correct FTP hostname
         username: ${{ secrets.USERNAME }}
