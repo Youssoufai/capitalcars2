@@ -12,11 +12,10 @@
                 <thead class="bg-gray-100 text-gray-700">
                     <tr>
                         <th class="py-3 px-6 text-left font-medium">Name</th>
-                        <th class="py-3 px-6 text-left font-medium">Email</th>
                         <th class="py-3 px-6 text-left font-medium">Phone</th>
+                        <th class="py-3 px-6 text-left font-medium">Car</th>
                         <th class="py-3 px-6 text-left font-medium">Preferred Date</th>
                         <th class="py-3 px-6 text-left font-medium">Preferred Time</th>
-                        <th class="py-3 px-6 text-left font-medium">Action</th>
                     </tr>
                 </thead>
                 <tbody class="text-gray-600">
@@ -27,7 +26,7 @@
                             <td class="py-3 px-6">{{ $testDrivee->vehicle }}</td>
                             <td class="py-3 px-6">{{ $testDrivee->date }}</td>
                             <td class="py-3 px-6">{{ $testDrivee->time }}</td>
-                            <td class="py-3 px-6">
+                  {{--           <td class="py-3 px-6">
                                 <span
                                     class="inline-block px-3 py-1 text-xs font-semibold text-white 
                                     {{ $testDrivee->status == 'approved'
@@ -37,7 +36,7 @@
                                             : 'bg-red-500') }} 
                                     rounded-full">
                                     {{ ucfirst($testDrivee->status) }}
-                                </span>
+                                </span> --}}
                             </td>
                         </tr>
                     @endforeach

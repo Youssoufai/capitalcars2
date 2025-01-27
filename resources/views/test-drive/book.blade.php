@@ -43,14 +43,11 @@
             <!-- Vehicle Selection -->
             <div class="mb-4">
                 <label for="vehicle" class="block text-gray-700 font-medium mb-2">Select Vehicle</label>
-                <select id="vehicle" name="vehicle"
+                <input id="vehicle" name="vehicle"
+                placeholder="What Car?"
                     class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <option value="">Select a vehicle</option>
-                    <option value="sedan">Sedan</option>
-                    <option value="suv">SUV</option>
-                    <option value="truck">Truck</option>
-                    <option value="coupe">Coupe</option>
-                </select>
+                   
+                </input>
             </div>
 
             <!-- Preferred Date -->
