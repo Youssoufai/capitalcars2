@@ -119,6 +119,7 @@
                     <div class="bg-white rounded-lg shadow-lg p-6 space-y-4">
                         <div class="flex flex-wrap md:flex-nowrap gap-6 border-b pb-4">
                             <div class="w-full md:w-1/3">
+                                {{-- comment --}}
                                 <img src="{{ asset('storage/car_images' . $vehicle->image) }}" alt="{{ $vehicle->model }}"
                                     class="w-full h-48 object-cover rounded-lg">
                             </div>
