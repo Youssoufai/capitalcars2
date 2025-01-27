@@ -66,6 +66,7 @@
                 <li><a href="{{ route('service') }}">Services</a></li>
                 <li><a href="{{ route('contact') }}">Contacts</a></li>
                 {{-- <li><a href="{{ route('admin.dashboard') }}">Admin</a></li> --}}
+                {{-- mistake --}}
             </ul>
         </div>
         <ul id="mobile-menu" class="hidden flex flex-col gap-4 mt-4 text-white md:hidden">
