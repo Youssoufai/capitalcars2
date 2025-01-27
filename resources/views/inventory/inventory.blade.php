@@ -120,7 +120,10 @@
                         <div class="flex flex-wrap md:flex-nowrap gap-6 border-b pb-4">
                             <div class="w-full md:w-1/3">
                                 {{-- comment --}}
-                                <img src="{{ asset('storage/car_images' . $vehicle->image) }}" alt="{{ $vehicle->model }}"
+                                <img src="{{ asset('storage/' . $vehicle->image) }}" alt="{{ $vehicle->model }}"
+                                    class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                                <img src="{{ asset('../storage/app/public/car_images' . $vehicle->image) }}" alt="{{ $vehicle->model }}"
                                     class="w-full h-48 object-cover rounded-lg">
                             </div>
                             <div class="w-full md:w-2/3 flex flex-col justify-between mb-4 space-y-4">
