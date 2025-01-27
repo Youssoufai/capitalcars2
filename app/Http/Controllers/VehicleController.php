@@ -119,7 +119,7 @@ class VehicleController extends Controller
         $vehicle->update($validatedData);
 
         // Redirect back with a success message
-        return redirect()->route('inventory');
+        return redirect()->route('inventory.index');
     }
 
     public function filter(Request $request)
