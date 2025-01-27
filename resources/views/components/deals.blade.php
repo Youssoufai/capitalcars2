@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="flex flex-col gap-3 bg-gray-400 text-white p-4 md:p-8 rounded-lg w-full md:w-[550px] h-full">
-            <img src="range-rover.jpg" class="h-full md:h-[400px] rounded-lg w-full" alt="Range Rover" />
+            <img src="/images/range-rover.jpg" class="h-full md:h-[400px] rounded-lg w-full" alt="Range Rover" />
             <div class='space-y-2 flex flex-col justify-between'>
                 <h1 class="text-xl md:text-2xl font-bold">RANGE ROVER 2022</h1>
                 <h1 class="text-sm md:text-base">2022 locally used RANGE ROVER for sale</h1>
