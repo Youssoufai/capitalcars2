@@ -19,7 +19,9 @@
                 </div>
             </div>
             <div class='flex flex-col space-y-8'>
-                <button class='text-red text-xl bg-white rounded-full px-11 py-2'>View our Inventory</button>
+                <button class='text-red text-xl bg-white rounded-full px-11 py-2'>
+                    <a href="{{ route('inventory.index') }}">View our Inventory</a>
+                </button>
             </div>
         </div>
         <div class="flex flex-col gap-3 bg-gray-400 text-white p-4 md:p-8 rounded-lg w-full md:w-[550px] h-full">
@@ -38,7 +40,7 @@
                 </div>
             </div>
             <div class='flex flex-col space-y-8'>
-                <button class='text-red text-xl bg-white rounded-full px-11 py-2'>View our Inventory</button>
+                <button class='text-red text-xl bg-white rounded-full px-11 py-2'><a href="{{ route('inventory.index') }}">View our Inventory</a></button>
             </div>
         </div>
         <div class="flex flex-col gap-3 bg-gray-400 text-white p-4 md:p-8 rounded-lg w-full md:w-[550px] h-full">
@@ -57,7 +59,7 @@
                 </div>
             </div>
             <div class='flex flex-col space-y-8'>
-                <button class='text-red text-xl bg-white rounded-full px-11 py-2'>View our Inventory</button>
+                <button class='text-red text-xl bg-white rounded-full px-11 py-2'><a href="{{ route('inventory.index') }}">View our Inventory</a></button>
             </div>
         </div>
     </section>
