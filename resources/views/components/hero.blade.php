@@ -18,7 +18,7 @@
     <!-- Description -->
     <meta name="description" content="Find the best deals on new and used cars at Capital Cars. Shop our wide range of vehicles with great prices, financing options, and more.">
 
-    <!-- Keywords -->
+    <!-- Keywords -->{{-- --}}
     <meta name="keywords" content="automobile dealership, car dealership, buy cars online, used cars, new cars, car financing, car sales">
 
     <!-- Open Graph Meta Tags (Social Media) -->
