@@ -4,4 +4,5 @@
     </section>
     <x-contactform />
     <x-form />
+    {{-- contact --}}
 </x-hero>
