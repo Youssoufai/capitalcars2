@@ -30,7 +30,7 @@
         <div class='bg-white p-8 rounded-lg space-y-4'>
             <h1 class='font-bold text-3xl'>Our Branch 01</h1>
             <h3 class='flex gap-1'><span class="font-bold">Address:</span>
-                <i class='fas fa-location-arrow text-red fa-2x'></i> 123 Street New York. USA
+                <i class='fas fa-location-arrow text-red fa-2x'></i> Plot 577 Opposite ANAN, Abuja Nigeria.
             </h3>
             <h3 class='flex gap-1'><span class="font-bold">Telephone:</span>
                 <i class='fas fa-phone fa-2x text-red'></i> +2348034534834
@@ -40,7 +40,7 @@
             <h1 class='font-bold text-3xl'>Our Branch 02</h1>
             <h3 class='flex gap-1'><span class="font-bold">Address:</span>
                 {{-- address --}}
-                <i class='fas fa-location-arrow text-red fa-2x'></i> 456 Avenue New York. USA
+                <i class='fas fa-location-arrow text-red fa-2x'></i> Plot 577 Opposite ANAN, Abuja Nigeria.
             </h3>
             <h3 class='flex gap-1'><span class="font-bold">Telephone:</span>
                 <i class='fas fa-phone fa-2x text-red'></i> +2348034534834
@@ -50,7 +50,7 @@
         <div class='bg-white p-8 rounded-lg space-y-4'>
             <h1 class='font-bold text-3xl'>Our Branch 03</h1>
             <h3 class='flex gap-1'><span class="font-bold">Address:</span>
-                <i class='fas fa-location-arrow fa-2x text-red'></i> 789 Boulevard New York. USA
+                <i class='fas fa-location-arrow fa-2x text-red'></i> Plot 577 Opposite ANAN, Abuja Nigeria.
             </h3>
             <h3 class='flex gap-1'><span class="font-bold">Telephone:</span>
                 <i class='fas fa-phone text-red fa-2x'></i> +2348034534834

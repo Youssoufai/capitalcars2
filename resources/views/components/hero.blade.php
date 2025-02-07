@@ -133,10 +133,10 @@
             <h1 class="text-3xl md:text-5xl text-left md:text-center">Contact Info</h1>
             <ul class="space-y-4">
                 <li class="flex">
-                    <i class="fas fa-location-arrow mx-4"></i> 123 STREET, Abuja, Nigeria.
+                    <i class="fas fa-location-arrow mx-4"></i>Plot 577 Opposite ANAN, Abuja Nigeria.
                 </li>
                 <li class="flex">
-                    <i class="fas fa-envelope mx-4"></i> Info@capitalcars.com
+                    <i class="fas fa-envelope mx-4"></i> SAABLEEM@GMAIL.COM
                 </li>
                 <li class="flex">
                     <i class="fas fa-phone mx-4"></i> +2348034534834

@@ -7,13 +7,13 @@
         <div class='bg-gray-100 p-8 md:p-16 space-y-4 flex-1'>
             <i class='fas fa-location-arrow bg-red fa-4x p-4 rounded-lg'></i>
             <h1 class='font-bold text-2xl md:text-3xl'>Address</h1>
-            <h3>123 STREET ABUJA. NIGERIA</h3>
+            <h3>Plot 577 Opposite ANAN, Abuja Nigeria.</h3>
             {{-- form --}}
         </div>
         <div class='bg-gray-100 p-8 md:p-16 space-y-4 flex-1'>
             <i class='fas fa-envelope bg-red fa-4x p-4 rounded-lg'></i>
             <h1 class='font-bold text-2xl md:text-3xl'>Mail Us</h1>
-            <h3>info@capitalcars.com</h3>
+            <h3>SAABLEEM@GMAIL.COM</h3>
         </div>
         <div class='bg-gray-100 p-8 md:p-16 space-y-4 flex-1'>
             <i class='fas fa-phone bg-red fa-4x p-4 rounded-lg'></i>
